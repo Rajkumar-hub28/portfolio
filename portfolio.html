@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>My Portfolio</title>
+  <style>
+    * { margin:0; padding:0; box-sizing:border-box; font-family:Arial, Helvetica, sans-serif; }
+    body { background:#0f172a; color:#e2e8f0; line-height:1.6; }
+    header { display:flex; justify-content:space-between; align-items:center; padding:20px 10%; background:#020617; position:sticky; top:0; }
+    header h1 { color:#38bdf8; }
+    nav a { margin-left:20px; text-decoration:none; color:#e2e8f0; }
+    nav a:hover { color:#38bdf8; }
+    section { padding:80px 10%; }
+    .hero { display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap; }
+    .hero-text { max-width:500px; }
+    .hero h2 { font-size:40px; color:#38bdf8; }
+    .btn { display:inline-block; margin-top:20px; padding:10px 20px; background:#38bdf8; color:#020617; text-decoration:none; border-radius:6px; }
+    .btn:hover { background:#0ea5e9; }
+    .card-container { display:grid; grid-template-columns:repeat(auto-fit,minmax(250px,1fr)); gap:20px; margin-top:30px; }
+    .card { background:#020617; padding:20px; border-radius:10px; transition:0.3s; }
+    .card:hover { transform:translateY(-5px); }
+    footer { text-align:center; padding:20px; background:#020617; margin-top:40px; }
+    @media(max-width:768px){ .hero{ flex-direction:column; text-align:center; } }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>Raj Kumar K S</h1>
+  <nav>
+    <a href="#about">About</a>
+    <a href="#skills">Skills</a>
+    <a href="#projects">Projects</a>
+    <a href="#contact">Contact</a>
+  </nav>
+</header>
+
+<section class="hero">
+  <div class="hero-text">
+    <h2>Hello, I'm a Web Developer</h2>
+    <p>I build responsive websites using HTML, CSS and JavaScript.</p>
+    <a href="#contact" class="btn">Hire Me</a>
+  </div>
+</section>
+
+<section id="about">
+  <h2>About Me</h2>
+  <p>I am a Computer Science Engineering student and aspiring Frontend Developer. I enjoy creating clean and responsive web interfaces using HTML and CSS. I have experience building portfolio websites, landing pages, and UI layouts.
+
+Currently, I am learning JavaScript and improving my problem-solving skills to become a full-stack developer. My goal is to develop user-friendly and accessible web applications that provide a great user experience.
+  </p>
+</section>
+<section id="skills">
+  <h2>Skills</h2>
+  <div class="card-container">
+    <div class="card">HTML</div>
+    <div class="card">CSS</div>
+    <div class="card">JavaScript</div>
+  
+  </div>
+</section>
+
+<section id="projects">
+  <h2>Projects</h2>
+  <div class="card-container">
+  
+    <div class="card">
+      <h3>Netflix Clone UI</h3>
+      <p>Frontend UI clone using HTML & CSS.</p>
+    </div>
+    <div class="card">
+      <h3>Dashboard UI</h3>
+      <p>Admin dashboard layout.</p>
+    </div>
+  </div>
+</section>
+
+<section id="contact">
+  <h2>Contact Me</h2>
+<div class="contact">
+  <a href="mailto:rajirajkumar2007@gmail.com" target="_blank" class="social" title="Email">
+    <img src="https://cdn-icons-png.flaticon.com/512/732/732200.png" width="28" alt="Gmail logo: red envelope with white checkmark, used to send email to rajirajkumar2007@gmail.com"/>
+  
+  </a>
+
+  <a href="https://www.linkedin.com/in/rajkumar-saravanan" target="_blank" rel="noopener" class="social" title="LinkedIn">
+    <img src="https://cdn-icons-png.flaticon.com/512/174/174857.png" width="28" alt="LinkedIn logo: white in and letters on blue rounded square background, link to Rajkumar Saravanan LinkedIn profile"/>
+  </a>
+</div>
+
+<footer>
+  <p>© 2026 My Portfolio</p>
+</footer>
+
+</body>
+</html>
