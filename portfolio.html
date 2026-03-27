@@ -29,21 +29,34 @@
     .card:nth-child(2) i, .card:nth-child(4) i, .card:nth-child(5) i, .card:nth-child(6) i { color:#e2e8f0; } /* Light text for other cards */
     .card:hover { transform:translateY(-5px); }
     .profile-img:hover { transform: scale(1.05); box-shadow:0 6px 12px rgba(0,0,0,0.4); }
-    .card:nth-child(1) { background:#f97316; color:#020617; } /* HTML - Orange */
-    .card:nth-child(2) { background:#3b82f6; } /* CSS - Blue */
+    .card:nth-child(1) { background:#14b8a6; color:#020617; } /* HTML - Teal */
+    .card:nth-child(2) { background:#3b82f6; color:#000000; } /* CSS - Blue with black text */
+    .card:nth-child(2) i { color:#000000; } /* CSS icon - Black */
     .card:nth-child(3) { background:#eab308; color:#020617; } /* JavaScript - Yellow */
-    .card:nth-child(4) { background:#10b981; } /* Responsive Design - Green */
-    .card:nth-child(5) { background:#8b5cf6; } /* SQL - Purple */
-    .card:nth-child(6) { background:#ef4444; } /* Python - Red */
+    .card:nth-child(4) { background:#10b981; color:#000000; } /* Responsive Design - Green with black text */
+    .card:nth-child(4) i { color:#000000; } /* Responsive Design icon - Black */
+    .card:nth-child(5) { background:#8b5cf6; color:#000000; } /* SQL - Purple with black text */
+    .card:nth-child(5) i { color:#000000; } /* SQL icon - Black */
+    .card:nth-child(6) { background:#ef4444; color:#000000; } /* Python - Red with black text */
+    .card:nth-child(6) i { color:#000000; } /* Python icon - Black */
     footer { text-align:center; padding:20px; background:#020617; margin-top:40px; }
     .form-group { position:relative; margin-bottom:20px; }
     input, textarea { width:100%; padding:10px; background:#020617; border:1px solid #f97316; color:#e2e8f0; border-radius:6px; }
     textarea { height:100px; resize:vertical; }
     label { position:absolute; top:-8px; left:5px; color:#f97316; font-size:12px; transition:0.3s; pointer-events:none; }
     input:focus + label, input:not(:placeholder-shown) + label, textarea:focus + label, textarea:not(:placeholder-shown) + label { color:#e2e8f0; }
-    #about h2, #skills h2, #projects h2, #contact h2 { color:#f97316; margin-bottom:40px; }
+    #about h2, #skills h2, #projects h2, #contact h2 { color:#f97316; margin-bottom:20px; }
     .contact { margin-top:40px; }
     .contact a { margin-right:20px; }
+    form button { display:block; margin:20px auto 0; width:fit-content; }
+    #about { background:linear-gradient(135deg, #1e1b4b 0%, #312e81 100%); border-radius:10px; padding:20px; }
+    .about-container { display:grid; grid-template-columns:repeat(auto-fit, minmax(300px, 1fr)); gap:15px; margin-top:15px; }
+    .about-card { background:#0f172a; padding:15px; border-left:4px solid #f97316; border-radius:8px; box-shadow:0 4px 12px rgba(0,0,0,0.3); }
+    .about-card:nth-child(1) i { color:#3b82f6; } /* Who I Am - Blue */
+    .about-card:nth-child(2) i { color:#10b981; } /* My Expertise - Green */
+    .about-card:nth-child(3) i { color:#8b5cf6; } /* My Vision - Purple */
+    .about-card h3 { color:#f97316; margin-bottom:8px; font-size:16px; }
+    .about-card p { font-size:13px; line-height:1.6; }
     @media(max-width:768px){ .hero{ flex-direction:column; text-align:center; } }
     @keyframes fadeIn {
       from { opacity: 0; transform: translateY(20px); }
@@ -80,9 +93,23 @@
 
 <section id="about">
   <h2>About Me</h2>
-  <p>Hello! I'm Raj Kumar K S, a dedicated Computer Science Engineering student with a passion for frontend development. I love crafting clean, responsive, and user-friendly web interfaces that not only look great but also provide an exceptional user experience.</p>
-  <p>My expertise lies in HTML, CSS, and JavaScript, where I've built various projects including portfolio websites, landing pages, and interactive UI layouts. Currently, I'm deepening my knowledge in JavaScript frameworks and backend technologies to evolve into a full-stack developer.</p>
-  <p>Beyond coding, I'm committed to continuous learning and problem-solving. My goal is to create accessible, innovative web applications that make a positive impact. Let's connect and build something amazing together!</p>
+  <div class="about-container">
+    <div class="about-card">
+      <i class="fas fa-code"></i>
+      <h3>Who I Am</h3>
+      <p>I'm Raj Kumar K S, a dedicated Computer Science Engineering student with a passion for frontend development. I love crafting clean, responsive, and user-friendly web interfaces that not only look great but also provide an exceptional user experience.</p>
+    </div>
+    <div class="about-card">
+      <i class="fas fa-hammer"></i>
+      <h3>My Expertise</h3>
+      <p>My expertise lies in HTML, CSS, and JavaScript. I've built various projects including portfolio websites, landing pages, and interactive UI layouts. Currently, I'm deepening my knowledge in JavaScript frameworks and backend technologies to evolve into a full-stack developer.</p>
+    </div>
+    <div class="about-card">
+      <i class="fas fa-lightbulb"></i>
+      <h3>My Vision</h3>
+      <p>Beyond coding, I'm committed to continuous learning and problem-solving. My goal is to create accessible, innovative web applications that make a positive impact. Let's connect and build something amazing together!</p>
+    </div>
+  </div>
 </section>
 <section id="skills">
   <h2>Skills</h2>
